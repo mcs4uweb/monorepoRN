@@ -1,31 +1,41 @@
-# Introduction 
-"Nx" refers to a set of extensible dev tools for monorepos, developed by Nrwl (Narwhal Technologies) to help manage and scale enterprise frontend development. Nx provides a set of tools and libraries for building scalable and maintainable frontend applications, and it includes features for creating micro frontends.
+## Introduction 
+`Nx` refers to a set of extensible dev tools for monorepos, developed by Nrwl (Narwhal Technologies) to help manage and scale enterprise frontend development. Nx provides a set of tools and libraries for building scalable and maintainable frontend applications, and it includes features for creating micro frontends.
 
 Micro frontends are an architectural approach that extends the concepts of microservices to the frontend development. Instead of building a monolithic frontend application, micro frontends involve breaking down the user interface into smaller, more manageable and independent parts. Each part, or micro frontend, can be developed, deployed, and maintained independently.
 
-# Try it out
+
+## Try it out
+
 Now, let's try it out!
 
-1. Start the ``angular-mf``,  ``next-mf``, ``react-mf``  and ``app-shell`` side by side:
+1. Run ``pnpm i`` in the root project directory.
+
+2. Start the ``angular-mf``,  ``next-mf``, ``react-mf``  and ``app-shell`` side by side:
 
     ```
     nx serve angular-mf (for angular micro frontend app)
+
     nx serve next-mf (for next micro frontend app)
+
     nx serve react-mf (for react micro frontend app)
+
     nx serve app-shell --o (for app shell)
     ```
+
 In the above commands, the last one `nx` command you noticed that there is a flag ``--o`` at the end. That's the shorthand to the flag `--open`. The purpose of this flag, basically it will open a the `localhost` url on your browser once command ran successfully.
 
-2. The app-shell should still be able to load the micro frontend.
+
+3. The app-shell should still be able to load the micro frontend.
 https://webpack.js.org/concepts/module-federation/
 
-# Micro frontend with Multi framework using Nx
+## Micro frontend with Multi framework using Nx
 
 This project was generated using [Nx](https://nx.dev).
 
 <p align="center"><img src="https://raw.githubusercontent.com/nrwl/nx/master/nx-logo.png" width="450"></p>
 
 🔎 **Powerful, Extensible Dev Tools**
+
 
 ## Quick Start & Documentation
 
@@ -45,18 +55,24 @@ Below are our core plugins:
 
 - [React](https://reactjs.org)
   - `npm install --save-dev @nx/react`
+
 - [Angular](https://angular.io)
   - `npm install --save-dev @nx/angular`
+
 - [Nest](https://nestjs.com)
   - `npm install --save-dev @nx/nest`
+
 - [Express](https://expressjs.com)
   - `npm install --save-dev @nx/express`
+
 - [Node](https://nodejs.org)
   - `npm install --save-dev @nx/node`
+
 - Web (no framework frontends)
   - `npm install --save-dev @nx/web`  
 
 There are also many [community plugins](https://nx.dev/community) you could add.
+
 
 ## Generate an application
 
@@ -66,6 +82,7 @@ Run `nx g @nx/react:app my-app` to generate an application.
 
 When using Nx, you can create multiple applications and libraries in the same workspace.
 
+
 ## Generate a library
 
 Run `nx g @nx/react:lib my-lib` to generate a library.
@@ -74,17 +91,21 @@ Run `nx g @nx/react:lib my-lib` to generate a library.
 
 Libraries are shareable across libraries and applications. They can be imported from `@nx-example/mylib`.
 
+
 ## Development server
 
 Run `nx serve my-app` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
+
 
 ## Code scaffolding
 
 Run `nx g @nx/react:component my-component --project=my-app` to generate a new component.
 
+
 ## Build
 
 Run `nx build my-app` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
 
 ## Running unit tests
 
@@ -92,19 +113,23 @@ Run `nx test my-app` to execute the unit tests via [Jest](https://jestjs.io).
 
 Run `nx affected:test` to execute the unit tests affected by a change.
 
+
 ## Running end-to-end tests
 
 Run `nx e2e my-app` to execute the end-to-end tests via [Cypress](https://www.cypress.io).
 
 Run `nx affected:e2e` to execute the end-to-end tests affected by a change.
 
+
 ## Understand your workspace
 
 Run `nx dep-graph` to see a diagram of the dependencies of your projects.
 
+
 ## Further help
 
 Visit the [Nx Documentation](https://nx.dev) to learn more.
+
 
 ## ☁ Nx Cloud
 
