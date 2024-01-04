@@ -34,6 +34,15 @@
     },
     "server": {
       "cache": true
+    },
+    "build-storybook": {
+      "cache": true,
+      "inputs": [
+        "default",
+        "^production",
+        "{projectRoot}/.storybook/**/*",
+        "{projectRoot}/tsconfig.storybook.json"
+      ]
     }
   },
   "namedInputs": {
@@ -49,7 +58,10 @@
       "!{projectRoot}/**/*.cy.[jt]s?(x)",
       "!{projectRoot}/cypress.config.[jt]s",
       "!{projectRoot}/.eslintrc.json",
-      "!{projectRoot}/eslint.config.js"
+      "!{projectRoot}/eslint.config.js",
+      "!{projectRoot}/**/*.stories.@(js|jsx|ts|tsx|mdx)",
+      "!{projectRoot}/.storybook/**/*",
+      "!{projectRoot}/tsconfig.storybook.json"
     ],
     "sharedGlobals": []
   },
@@ -84,5 +96,12 @@
       }
     }
   },
-  "nxCloudAccessToken": "YmNkNGQxY2MtYWJlOS00MzQ2LTllMWYtOWZiZTlkNzMzODJjfHJlYWQtd3JpdGU="
+  "nxCloudAccessToken": "YmNkNGQxY2MtYWJlOS00MzQ2LTllMWYtOWZiZTlkNzMzODJjfHJlYWQtd3JpdGU=",
+  "tasksRunnerOptions": {
+    "default": {
+      "options": {
+        "cacheableOperations": ["build-storybook"]
+      }
+    }
+  }
 }

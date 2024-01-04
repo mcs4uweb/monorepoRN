@@ -3,6 +3,14 @@
 
 Micro frontends are an architectural approach that extends the concepts of microservices to the frontend development. Instead of building a monolithic frontend application, micro frontends involve breaking down the user interface into smaller, more manageable and independent parts. Each part, or micro frontend, can be developed, deployed, and maintained independently.
 
+## Nx 
+
+Allows multiple web stacks, Angular or React or Web using Node
+
+Build single apps, navigate to the root of the single app
+
+npx nx build
+
 
 ## Try it out
 
@@ -146,3 +154,28 @@ Teams using Nx gain the advantage of building full-stack applications with their
 [Computation Caching Fundamentals](https://blog.nrwl.io/computation-caching-the-fundamentals-behind-nxs-lightning-fast-execution-dc761fe41eb8)
 
 [Computation Caching with NX](https://nx.dev/latest/core-concepts/computation-caching)
+
+## storybook
+
+npx nx g @nx/react:storybook-configuration
+
+ NX  Generating @nx/react:storybook-configuration
+
+ select a project
+
+  √ For which project do you want to generate Storybook configuration? · next-mf
+  √ Do you want to set up Storybook interaction tests? (Y/n) · true
+  √ Automatically generate *.stories.ts files for components declared in this project? (Y/n) · true
+  √ Configure a static file server for the storybook instance? (Y/n) · true
+
+## migrate
+
+npx nx migrate latest
+
+question, how often should we run the migrate
+
+latest migration list
+https://craigory.dev/npm-burst/
+
+
+
