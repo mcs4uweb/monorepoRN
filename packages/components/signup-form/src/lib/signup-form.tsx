@@ -2,17 +2,17 @@ import React from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { Button, FormControl, InputLabel, Input, FormHelperText, Container } from '@mui/material';
 
-interface AddressFormData {
+interface SignUpFormData {
   firstName: string;
   lastName: string;
   email: string;
   password: string;
 }
 
-export const AddressForm: React.FC = () => {
-  const { handleSubmit, control, formState: { errors } } = useForm<AddressFormData>();
+export const SignUpForm: React.FC = () => {
+  const { handleSubmit, control, formState: { errors } } = useForm<SignUpFormData>();
 
-  const onSubmit = (data: AddressFormData) => {
+  const onSubmit = (data: SignUpFormData) => {
     console.log(data);
     // You can handle form submission logic here
   };
@@ -92,4 +92,4 @@ export const AddressForm: React.FC = () => {
   );
 };
 
-export default AddressForm;
+export default SignUpForm;
