@@ -18,22 +18,20 @@ Now, let's try it out!
 
 1. Run ``pnpm i`` in the root project directory.
 
-2. Start the ``angular-mf``,  ``next-mf``, ``react-mf``  and ``app-shell`` side by side:
+2. Start the ``angular-mf``,  ``next-mf``, ``react-mf``  and ``app-shell`` using following command:
 
     ```
-    nx serve angular-mf (for angular micro frontend app)
+    pnpm app-shell  
 
-    nx serve next-mf (for next micro frontend app)
+        OR
 
-    nx serve react-mf (for react micro frontend app)
+    pnpm run app-shell
 
-    nx serve app-shell --o (for app shell)
     ```
 
-In the above commands, the last one `nx` command you noticed that there is a flag ``--o`` at the end. That's the shorthand to the flag `--open`. The purpose of this flag, basically it will open a the `localhost` url on your browser once command ran successfully.
+3. To see the app just open `localhost:4200` in browser.
 
-
-3. The app-shell should still be able to load the micro frontend.
+4. The app-shell should still be able to load the micro frontend.
 https://webpack.js.org/concepts/module-federation/
 
 ## Micro frontend with Multi framework using Nx

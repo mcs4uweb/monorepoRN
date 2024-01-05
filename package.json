@@ -2,15 +2,21 @@
   "name": "@aeries/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "app-shell": "nx run-many -t serve -p angular-mf react-mf next-mf app-shell --parallel=5"
+  },
   "private": true,
   "dependencies": {
     "@angular-architects/module-federation-tools": "^17.0.1",
     "@angular/animations": "~17.0.0",
+    "@angular/cdk": "^17.0.4",
     "@angular/common": "~17.0.0",
     "@angular/compiler": "~17.0.0",
     "@angular/core": "~17.0.0",
+    "@angular/flex-layout": "15.0.0-beta.42",
     "@angular/forms": "~17.0.0",
+    "@angular/material": "^17.0.4",
+    "@angular/material-moment-adapter": "^17.0.4",
     "@angular/platform-browser": "~17.0.0",
     "@angular/platform-browser-dynamic": "~17.0.0",
     "@angular/platform-server": "~17.0.0",
