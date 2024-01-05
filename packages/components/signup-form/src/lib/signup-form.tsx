@@ -1,6 +1,6 @@
 import React from 'react';
-import { useForm, Controller } from 'react-hook-form';
-import { Button, FormControl, InputLabel, Input, FormHelperText, Container } from '@mui/material';
+import { Controller, RegisterOptions, useFormContext } from 'react-hook-form';
+import { FormControl, InputLabel, Input, FormHelperText, Container } from '@mui/material';
 
 interface SignUpFormData {
   firstName: string;
@@ -9,26 +9,23 @@ interface SignUpFormData {
   password: string;
 }
 
-export const SignUpForm: React.FC = () => {
-  const { handleSubmit, control, formState: { errors } } = useForm<SignUpFormData>();
+interface FormProps {
+  registerOptMeta?: Record<keyof SignUpFormData, RegisterOptions>
+}
 
-  const onSubmit = (data: SignUpFormData) => {
-    console.log(data);
-    // You can handle form submission logic here
-  };
+export const SignUpForm: React.FC<FormProps> = (props) => {
+  const { registerOptMeta: {firstName: firstNameRules, lastName: lastNameRules, email: emailRules, password: passwordRules} = {} } = props;
+  const { control, formState: { errors } } = useFormContext<SignUpFormData>();
 
   return (
     <Container maxWidth="sm">
-      <form onSubmit={handleSubmit(onSubmit)}>
         <FormControl fullWidth margin="normal">
           <InputLabel htmlFor="firstName">First Name</InputLabel>
           <Controller
             name="firstName"
             control={control}
             defaultValue=""
-            rules={{
-              required: 'This field is required',
-            }}
+            rules={firstNameRules}
             render={({ field }) => <Input {...field} />}
           />
           <FormHelperText error>{errors.firstName && errors.firstName.message}</FormHelperText>
@@ -40,9 +37,7 @@ export const SignUpForm: React.FC = () => {
             name="lastName"
             control={control}
             defaultValue=""
-            rules={{
-              required: 'This field is required',
-            }}
+            rules={lastNameRules}
             render={({ field }) => <Input {...field} />}
           />
           <FormHelperText error>{errors.lastName && errors.lastName.message}</FormHelperText>
@@ -54,13 +49,7 @@ export const SignUpForm: React.FC = () => {
             name="email"
             control={control}
             defaultValue=""
-            rules={{
-              required: 'This field is required',
-              pattern: {
-                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-                message: 'Invalid email address',
-              },
-            }}
+            rules={emailRules}
             render={({ field }) => <Input {...field} />}
           />
           <FormHelperText error>{errors.email && errors.email.message}</FormHelperText>
@@ -72,22 +61,11 @@ export const SignUpForm: React.FC = () => {
             name="password"
             control={control}
             defaultValue=""
-            rules={{
-              required: 'This field is required',
-              minLength: {
-                value: 6,
-                message: 'Password must be at least 6 characters long',
-              },
-            }}
+            rules={passwordRules}
             render={({ field }) => <Input type="password" {...field} />}
           />
           <FormHelperText error>{errors.password && errors.password.message}</FormHelperText>
         </FormControl>
-
-        <Button type="submit" variant="contained" color="primary" fullWidth>
-          Sign Up
-        </Button>
-      </form>
     </Container>
   );
 };

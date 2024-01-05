@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { App } from './app';
+import App from './app';
 
 import { within } from '@storybook/testing-library';
 import { expect } from '@storybook/jest';
