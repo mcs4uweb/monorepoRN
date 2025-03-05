@@ -72,7 +72,7 @@ const WelcomeCard = () => {
               letterSpacing: '-0.025em',
             }}
           >
-            Welcome to Aeries!
+            Welcome to OneForm!
           </Translate>
           <Translate
             sx={{
