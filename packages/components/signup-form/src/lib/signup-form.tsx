@@ -13,7 +13,7 @@ interface FormProps {
   registerOptMeta?: Record<keyof SignUpFormData, RegisterOptions>
 }
 
-export const SignUpForm: React.FC<FormProps> = (props) => {
+export const SignUpForm = (props: FormProps) => {
   const { registerOptMeta: {firstName: firstNameRules, lastName: lastNameRules, email: emailRules, password: passwordRules} = {} } = props;
   const { control, formState: { errors } } = useFormContext<SignUpFormData>();
 
@@ -25,7 +25,6 @@ export const SignUpForm: React.FC<FormProps> = (props) => {
             name="firstName"
             control={control}
             defaultValue=""
-            rules={firstNameRules}
             render={({ field }) => <Input {...field} />}
           />
           <FormHelperText error>{errors.firstName && errors.firstName.message}</FormHelperText>
@@ -37,7 +36,6 @@ export const SignUpForm: React.FC<FormProps> = (props) => {
             name="lastName"
             control={control}
             defaultValue=""
-            rules={lastNameRules}
             render={({ field }) => <Input {...field} />}
           />
           <FormHelperText error>{errors.lastName && errors.lastName.message}</FormHelperText>
@@ -49,7 +47,6 @@ export const SignUpForm: React.FC<FormProps> = (props) => {
             name="email"
             control={control}
             defaultValue=""
-            rules={emailRules}
             render={({ field }) => <Input {...field} />}
           />
           <FormHelperText error>{errors.email && errors.email.message}</FormHelperText>
@@ -61,7 +58,6 @@ export const SignUpForm: React.FC<FormProps> = (props) => {
             name="password"
             control={control}
             defaultValue=""
-            rules={passwordRules}
             render={({ field }) => <Input type="password" {...field} />}
           />
           <FormHelperText error>{errors.password && errors.password.message}</FormHelperText>

@@ -12,11 +12,16 @@
   </mat-toolbar>
 
   <mat-drawer-container fxFlex autosize>
-    <mat-drawer #drawer>
+    <mat-drawer #drawer style="margin: 10px;background-color:#5151f2;">
       <div fxLayout="column" style="margin: 10px;">
-        <button mat-raised-button routerLink="/home" (click)="drawer.toggle()" routerLinkActive="mat-primary" fxLayoutAlign="start" class="py-2 pr-5 m-2">
-          <mat-icon class="mr-2">filter_1</mat-icon>Home</button>
-        <mat-divider></mat-divider>
+       
+       
+        <a routerLink="/home">Home</a>
+        <a routerLink="//angular-mf">Angular App</a>
+        <a routerLink="/react-mf">React App</a>
+        <a routerLink="/next-mf">Next JS App</a>
+         
+      <!--   <mat-divider></mat-divider>
         <button mat-raised-button routerLink="/angular-mf" (click)="drawer.toggle()" routerLinkActive="mat-primary" fxLayoutAlign="start" class="py-2 pr-5 m-2">
           <mat-icon class="mr-2">filter_2</mat-icon>Angular App</button>
         <mat-divider></mat-divider>
@@ -25,7 +30,7 @@
         <mat-divider></mat-divider>
         <button mat-raised-button routerLink="/next-mf" (click)="drawer.toggle()" routerLinkActive="mat-primary" fxLayoutAlign="start" class="py-2 pr-5 m-2">
           <mat-icon class="mr-2">filter_4</mat-icon>Next App</button>
-        <mat-divider></mat-divider>
+        <mat-divider></mat-divider> -->
       </div>
     </mat-drawer>
 

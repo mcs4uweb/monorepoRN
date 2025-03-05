@@ -5,7 +5,7 @@ function App() {
   return (
     <div style={{margin: 20}}>
       <Home />
-      <NxWelcome title="next-mf" />
+      <NxWelcome title="Next JS App" />
     </div>
   );
 }

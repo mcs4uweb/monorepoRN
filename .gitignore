@@ -4,6 +4,7 @@
 dist
 tmp
 /out-tsc
+.history
 
 # dependencies
 node_modules
@@ -112,3 +113,7 @@ yarn-error.log
 
 
 apps/react-native-mf-e2e/artifacts
+
+
+
+.nx/workspace-data

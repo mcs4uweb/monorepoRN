@@ -87,7 +87,7 @@ const WelcomeCard = () => {
             endIcon={<ArrowNarrowRightIcon />}
             sx={{ backgroundColor: '#345BA9', textTransform: 'none' }}
           >
-            Take a Tour
+            Take a Tour Today
           </Button>
         </FlexColumn>
         <Box
