@@ -13,7 +13,7 @@ import { Typography as MuiTypography, TypographyProps as MuiTypographyProps } fr
  *
  * - [Typography API](https://mui.com/material-ui/api/typography/)
  *
- * @author Ryan Belcher
+ * 
  */
 export const Translate = ({ children, ...other }: MuiTypographyProps) => {
 

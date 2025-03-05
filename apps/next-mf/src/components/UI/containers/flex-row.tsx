@@ -12,7 +12,7 @@ import { forwardRef } from "react";
  *
  * - [Box API](https://mui.com/system/api/box/)
  *
- * @author Ryan Belcher
+ * 
  */
 export const FlexRow = forwardRef(({ children, sx, ...other }: MuiBoxProps, ref) => (
   <MuiBox sx={{ display: "flex", flexDirection: "row", ...sx}} {...other} ref={ref}>
